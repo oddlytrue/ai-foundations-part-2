@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Lab Notes</title>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Beginner AI and web development lab</p>
+          <h1>AI Lab Notes</h1>
+          <p>
+            Keep setup tasks, useful commands, and experiment notes in one simple
+            local app. Your notes stay in this browser.
+          </p>
+        </div>
+      </header>
+
+      <section class="section-grid" aria-label="Lab starter resources">
+        <article class="panel">
+          <h2>Setup Checklist</h2>
+          <ul class="checklist" id="setup-checklist"></ul>
+        </article>
+
+        <article class="panel">
+          <h2>Linux and Git Cheat Sheet</h2>
+          <div class="command-list" id="command-list"></div>
+        </article>
+      </section>
+
+      <section class="notes-layout" aria-label="Lab notes">
+        <form class="panel note-form" id="note-form">
+          <div class="form-heading">
+            <h2>New Lab Note</h2>
+            <p>Write down what you tried, what happened, and what to do next.</p>
+          </div>
+
+          <label>
+            Lab title
+            <input name="title" placeholder="First AI prompt test" required />
+          </label>
+
+          <label>
+            Date
+            <input name="date" type="date" required />
+          </label>
+
+          <label>
+            Goal
+            <textarea
+              name="goal"
+              placeholder="What are you trying to learn or build?"
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            Tools used
+            <textarea name="tools" placeholder="Example: Vite, Git, browser dev tools"></textarea>
+          </label>
+
+          <label>
+            Steps taken
+            <textarea name="steps" placeholder="List the main steps you followed."></textarea>
+          </label>
+
+          <label>
+            Results
+            <textarea name="results" placeholder="What worked? What failed? What surprised you?"></textarea>
+          </label>
+
+          <label>
+            Next steps
+            <textarea name="nextSteps" placeholder="What should you try next?"></textarea>
+          </label>
+
+          <button type="submit">Save note</button>
+        </form>
+
+        <aside class="panel saved-notes">
+          <div class="saved-heading">
+            <div>
+              <h2>Saved Notes</h2>
+              <p id="saved-count">0 notes saved</p>
+            </div>
+            <button class="secondary-button" type="button" id="clear-notes">Clear all</button>
+          </div>
+
+          <div id="saved-notes"></div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
